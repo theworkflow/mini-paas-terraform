@@ -1,0 +1,26 @@
+{
+  "name": "mini-paas-terraform",
+  "version": "0.0.0",
+  "description": "Terraform infrastructure for Mini PaaS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theworkflow/mini-paas-terraform.git"
+  },
+  "keywords": [
+    "terraform",
+    "mini",
+    "paas",
+    "platform",
+    "service"
+  ],
+  "author": "Jeremiah Harlan <jeremiah.harlan@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theworkflow/mini-paas-terraform/issues"
+  },
+  "homepage": "https://github.com/theworkflow/mini-paas-terraform#readme"
+}
