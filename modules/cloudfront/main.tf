@@ -12,7 +12,7 @@ resource "aws_cloudfront_origin_access_identity" "default" {
   comment = var.comment
 }
 
-resource "aws_cloudfront_distribution" "s3_distribution" {
+resource "aws_cloudfront_distribution" "default" {
   origin {
     domain_name = var.domain_name
     origin_id   = local.s3_origin_id

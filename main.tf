@@ -20,12 +20,13 @@ module "label" {
 }
 
 module "deploy_user" {
-  source        = "./modules/deploy_user"
-  path          = "/"
-  force_destroy = var.force_destroy
-  name          = "${module.label.id}-deployer"
-  s3_bucket_arn = module.web_app.arn
-  tags          = module.label.tags
+  source         = "./modules/deploy_user"
+  path           = "/"
+  force_destroy  = var.force_destroy
+  name           = "${module.label.id}-deployer"
+  s3_bucket_arn  = module.web_app.arn
+  cloudfront_arn = module.cdn.arn
+  tags           = module.label.tags
 }
 
 module "web_app" {

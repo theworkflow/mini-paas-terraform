@@ -21,6 +21,40 @@ data "aws_iam_policy_document" "default" {
       "${var.s3_bucket_arn}/*"
     ]
   }
+
+  statement {
+    sid      = "DeployerPutObject"
+    effect   = "Allow"
+    actions  = [
+      "s3:PutObject",
+      "s3:PutObjectAcl"
+    ]
+    resources = [
+      "${var.s3_bucket_arn}/*"
+    ]
+  }
+
+  statement {
+    sid      = "DeployerDeleteObject"
+    effect   = "Allow"
+    actions  = [
+      "s3:DeleteObject"
+    ]
+    resources = [
+      "${var.s3_bucket_arn}/*"
+    ]
+  }
+
+  statement {
+    sid       = "CloudfrontInvalidation"
+    effect    = "Allow"
+    actions   = [
+      "cloudfront:CreateInvalidation"
+    ]
+    resources = [
+      "${var.cloudfront_arn}"
+    ]
+  }
 }
 
 resource "aws_iam_user" "default" {

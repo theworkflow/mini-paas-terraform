@@ -3,6 +3,11 @@ variable "s3_bucket_arn" {
   description = "S3 bucket ARN"
 }
 
+variable "cloudfront_arn" {
+  type        = "string"
+  description = "CloudFront ARN"
+}
+
 variable "name" {
   type        = "string"
   description = "IAM user name"
